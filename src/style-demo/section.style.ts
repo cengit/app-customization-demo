@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {LBU} from '@env';
+import { StyleSheet } from 'react-native';
+import { LBU } from '@env';
 
 // default style
 const style = StyleSheet.create({
@@ -20,8 +20,11 @@ const style = StyleSheet.create({
     fontWeight: '700',
   },
 });
+
 // custom style
 const customStyle = require(`./section.${LBU}.style`);
+// const customStyle = require(`./section.sg.style`);
 
 // combine default-style and custom-style, so we can use both of them
 export const styles = StyleSheet.flatten([style, customStyle.style]);
+// todo: flatten performance issue
